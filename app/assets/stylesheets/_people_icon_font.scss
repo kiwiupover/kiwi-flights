@@ -1,0 +1,22 @@
+.icon-six, .icon-four, .icon-three, .icon-two {
+  font-family: 'people';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-six:before {
+  content: "\36";
+}
+.icon-four:before {
+  content: "\34";
+}
+.icon-three:before {
+  content: "\33";
+}
+.icon-two:before {
+  content: "\32";
+}

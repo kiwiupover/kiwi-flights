@@ -1,0 +1,1 @@
+App.VansCreateController = Em.ObjectController.extend()

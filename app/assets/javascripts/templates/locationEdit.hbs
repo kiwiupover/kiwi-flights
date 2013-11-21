@@ -1,0 +1,15 @@
+<div class="edit-location">
+  <h4>{{name}}</h4>
+  <form {{action save on='submit'}}>
+    {{input value=name placeholder="Name" type='text'}}
+    {{textarea value=details}}
+
+    <img {{bindAttr src=imageUrl }} >
+    <a href="#" class="button rounded small filepicker expand" data-new_photo_url=uploadUrl>Upload Image</a>
+    <div class="clear mtm">
+      {{input type='submit' value="Save" class="button"}}
+      <a class="right mts" href="#" {{action destroy}}>Delete</a>
+    </div>
+  </form>
+</div>
+

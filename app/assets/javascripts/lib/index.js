@@ -1,0 +1,10 @@
+//= require lib/pickadate
+//= require lib/filepicker
+//= require lib/accounting
+//= require lib/case
+//= require lib/showdown
+//= require lib/moment
+//= require lib/jquery.lazyload
+//= require lib/jquery.validation
+//= require lib/socket.io
+//= require lib/foundation_include_js_files

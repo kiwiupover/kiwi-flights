@@ -1,0 +1,45 @@
+<div class="large-12 columns">
+  <div class="page">
+    <h2>
+      Results for:
+      <small>
+        {{#if startDate}}
+          Leaving {{titleCase pickupLocation}}
+          on {{date startDate}}
+          returning {{totalNumberOfDays}} later
+          {{#if dropoffLocation}}
+            to {{titleCase dropoffLocation}}
+          {{/if}}
+        {{/if}}
+      </small>
+    </h2>
+    {{#if content}}
+      <div class="row">
+        <div class="columns large-12 panel">
+          <dl class="sub-nav">
+            <dt>Filter:</dt>
+            <dd><button {{action filteredContent}}>Filter</button></dd>
+            <dd class="active">{{#link-to queryParams=false}}All{{/link-to}}</dd>
+            <dd>{{#link-to filter='4orMore'}}4 or more People{{/link-to}}</dd>
+            <dd>{{#link-to sort='true'}}by Price{{/link-to}}</dd>
+          </dl>  
+        </div>
+      </div>
+      <ul class="no-bullet">
+        {{#each controller}}
+          {{search-result price=price vans=vans}}
+        {{/each}}
+      </ul>
+    {{else}}
+      <div class="large-4 large-centered columns">
+        <div class="text-center">
+          <h4>Finding you the perfect ride.</h4>
+        </div>
+        {{loading-balls}}
+      </div>
+
+    {{/if}}
+
+    {{outlet}}
+  </div>
+</div>

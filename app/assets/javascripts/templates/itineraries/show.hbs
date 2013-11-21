@@ -1,0 +1,11 @@
+<div class="intinerary">
+  <div class="panel">
+    <h2>{{title}} <small>{{#link-to 'itineraryEdit' this}}edit{{/link-to}}</small></h2>
+    <p>{{showdown description}}</p>
+  </div>
+  {{outlet}}
+  {{#each locations itemController="itinerary"}}
+    {{view App.ItineraryView}}
+  {{/each}}
+  {{#link-to 'itineraries' class='back-link'}}Back to Itineraries{{/link-to}}
+</div>

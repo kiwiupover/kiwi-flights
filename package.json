@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "karma-ember-preprocessor": "*",
+    "karma-qunit": "*",
+    "karma": "0.10.2",
+    "karma-ie-launcher": "~0.1.1",
+    "karma-firefox-launcher": "~0.1.0",
+    "karma-safari-launcher": "~0.1.1",
+    "grunt": "~0.4.1",
+    "grunt-karma": "~0.6.2",
+    "grunt-contrib-watch": "~0.5.3"
+  }
+}

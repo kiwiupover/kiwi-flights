@@ -1,0 +1,26 @@
+.intinerary
+  position: relative
+  +section-colors
+  section
+    +grid-row
+    color: white
+    padding: 50px emCalc(200px)
+    h2, h3, h4
+      font-family: $bold-font-family
+      color: white
+      text-shadow: 1px 1px 1px rgba(200, 200, 200, 0.3)
+
+    h3
+      font-size: emCalc(70px)
+
+    h4
+      font-size: emCalc(60px)
+    img
+
+.edit-itinerary, .edit-location
+  @include panel
+  textarea
+    height: emCalc(200px)
+
+
+

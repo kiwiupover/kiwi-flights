@@ -1,0 +1,18 @@
+<form {{action save on=submit}}>
+  {{input value=name class='van-name' placeholder="Van name"}}
+  {{textarea value=description placeholder="Van Description"}}
+  {{textarea value=details class='van-details' placeholder="Van Details"}}
+  {{input value=imageUrl class='image-url' placeholder="Small image url ie='image-name'"}}
+  {{input value=imageLarge class='image-large-url' placeholder="Large image url ie='image-name'"}}
+  {{input value=brand class='van-brand' placeholder="Van brand"}}
+  {{input value=beds class='bed-number' placeholder="Number of Beds" type="number"}}
+  
+  {{toggle-switch value=fridge label="Fridge"}}
+  {{toggle-switch value=freezer label="Freezer"}}
+  {{toggle-switch value=stove label="Stove"}}
+  {{toggle-switch value=microwave label="Microwave"}}
+  {{toggle-switch value=dvdPlayer label="DVD Player"}}
+  {{toggle-switch value=shower label="Shower"}}
+  {{toggle-switch value=toilet label="Toilet"}}
+  <button class="submit" type=submit>Save</button>
+</form>

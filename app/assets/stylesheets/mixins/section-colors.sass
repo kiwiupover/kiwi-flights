@@ -1,0 +1,8 @@
+// repeated at 13
+$colors: (#1abc9c, #e67e22, #2ecc71, #3498db, #34495e, #f1c40f, #e74c3c, #16a085, #27ae60, #2980b9, #c0392b, #2c3e50, #16a085, #1abc9c, #e67e22, #2ecc71, #3498db, #34495e, #f1c40f, #e74c3c, #16a085, #27ae60, #2980b9, #c0392b, #2c3e50, #16a085)
+@mixin section-colors
+  $i: 1
+  @each $color in $colors
+    section:nth-of-type(#{$i})
+      background-color: $color
+    $i: $i+1

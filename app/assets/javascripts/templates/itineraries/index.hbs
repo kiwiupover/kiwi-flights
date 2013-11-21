@@ -1,0 +1,9 @@
+<ul class="small-block-grid-3">
+  {{#each}}
+    <li>
+      <div class="panel">
+        <h3>{{#link-to 'itineraries.show' this}}{{title}}{{/link-to}}</h3>
+      </div>
+    </li>
+  {{/each}}
+</ul>

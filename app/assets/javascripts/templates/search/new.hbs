@@ -1,0 +1,55 @@
+<div class="large-6 large-centered columns bookings">
+  <div class="large-12 columns">
+    <h3>Travel New Zealand, go where ever your soul leads</h3>
+    <p>Find the right motor home or camper van for your Journey.</p>
+  </div>
+  <form {{action save on="submit" target="view"}} class="custom">
+    <div class="large-6 columns">
+      {{view App.StartDatePicker valueBinding="startDate" placeholder="Start Date"  contentBinding="content" name="start-date" id="start-date"}}
+    </div>
+    <div class="large-6 columns">
+      {{view App.EndDatePicker valueBinding="endDate" dateMinBinding="startDate" placeholder="End Date" contentBinding="content" name='end-date'}}
+    </div>
+    <div class="large-6 columns pickup-location">
+      {{view Ember.Select viewName="select"
+                      contentBinding="App.rentalLocation"
+                      optionValuePath="content.value"
+                      optionLabelPath="content.rentalLocation"
+                      prompt="Pick up location:"
+                      selectionBinding="pickupLocation"
+                      id="pickup-location"
+                      class='required'
+                      name="pickup-location"}}
+    </div>
+    <div class="large-6 columns">
+      {{view Ember.Select viewName="select"
+                      contentBinding="App.rentalLocation"
+                      optionValuePath="content.value"
+                      optionLabelPath="content.rentalLocation"
+                      prompt="Drop off location: same as pickup"
+                      selectionBinding="dropOffLocation"
+                      name="dropoff-location"}}
+    </div>
+
+    <div class="large-6 columns clear">
+    {{input type='submit' value='Submit' class='button round expand'}}
+    </div>
+    <div class="large-6 columns text-center">
+      <a class="button round secondary small" href="#">Find out more</a>
+    </div>
+
+
+
+    <div class="large-12 columns">
+      {{#if startDate}}
+        Leaving {{startDate}}
+      {{/if}}
+      {{#if endDate}}
+         returning {{endDate}}
+      {{/if}}
+    </div>
+
+  </form>
+</div>
+
+

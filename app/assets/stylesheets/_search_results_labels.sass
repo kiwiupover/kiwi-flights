@@ -1,0 +1,15 @@
+$color: #e67e22
+
+$colors: #e67e22, #2ecc71, #3498db, #34495e, #f1c40f, #e74c3c, #2980b9, #c0392b
+$labels: ((fridge, #1abc9c), (freezer, #2ecc71), (stove, #3498db), (dvd-player, #34495e), (microwave, #f1c40f), (shower, #e74c3c), (toilet, #c0392b))
+@mixin labels
+  $i: 1
+  @each $label in $labels
+    $name: nth($label, 1)
+    $color: nth($label, 2)
+    .label-#{$name}
+      +label($bg:$color, $radius:3px, $padding: emCalc(5px) emCalc(7px), $text-size: 90%)
+      margin-bottom: 5px
+    $i: $i+1
+
++labels

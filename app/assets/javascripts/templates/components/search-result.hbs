@@ -1,0 +1,33 @@
+<div class="money">
+  <h3>{{dollars price}}<span class="cents">NZD</span></h3>
+</div>
+<div class="title">
+  <h3>{{vans.name}}</h3> 
+  <p><small>from</small> {{vans.brand}}</p> 
+</div>
+<div class="details">
+  <div class="options">
+      {{people vans.beds}}
+    <div class="van-labels">
+      {{partial van_details}}
+    </div>
+  </div>
+</div>
+<div class="image">
+  <img {{bindAttr src="vans.smallImageUrl" title="vans.name"}}>
+</div>
+<div class="reserve">
+  <a class="button-round" {{bindAttr href=url}}>Book Now</a>
+</div>
+<button class="detail-button" {{action toggleShowDetails}}>{{buttonText}}</button>
+{{#if showDetail}}
+  <div class="van-details">
+    <div class="details">
+      {{showdown vans.details}}
+    </div>
+    <div class="photo">
+      <img {{bindAttr data-original="vans.largeImageUrl" title="vans.name"}}>
+    </div>
+  </div>
+{{/if}}
+

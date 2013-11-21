@@ -1,0 +1,21 @@
+<div class="small-12 columns">
+  <ul class="no-bullet vans">
+    {{#each vans}}
+      <li class="result row">
+        <div class="large-8 column">
+          <h3>{{brand}} - {{name}}</h3>
+          <h5>Sleeps {{beds}}</h5>
+          <p>{{description}}</p>
+          {{showdown details}}
+        </div>
+        <div class="large-3 column">
+          <img {{bindAttr src="smallImageUrl" title="name"}}>
+        </div>
+        <div class="large-1 column">
+          {{#link-to 'vans.edit' this class="button tiny"}}Edit{{/link-to}}
+          <button class='tiny' {{action 'deleteVan' this}}>Delete</button>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>
